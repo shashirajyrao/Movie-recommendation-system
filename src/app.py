@@ -102,7 +102,7 @@ def fetch_poster(movie_id):
 
     try:
         response = requests.get(
-            f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={YOUR_API_KEY}&language=en-US"
+            f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={YOUR_TMDB_API_KEY}&language=en-US"
         )
         data = response.json()
         poster_path = data.get('poster_path')
@@ -231,7 +231,7 @@ def search_by_keyword():
 def get_movie_trailer(movie_id):
     try:
         response = requests.get(
-            f"https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key={YOUR_API_KEY}&language=en-US"
+            f"https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key={YOUR_TMDB_API_KEY}&language=en-US"
         )
         data = response.json()
         # Filter trailers
@@ -246,4 +246,5 @@ def get_movie_trailer(movie_id):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5555, debug=True)
+
 
