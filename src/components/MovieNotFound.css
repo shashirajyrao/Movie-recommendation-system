@@ -1,0 +1,17 @@
+.not-found-container {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.not-found-image {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.not-found-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+  text-shadow: 0 0 5px black;
+}

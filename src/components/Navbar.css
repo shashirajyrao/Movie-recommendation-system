@@ -1,0 +1,143 @@
+.Navbar {
+  background: linear-gradient(to right, #1e3a8a, #2563eb); /* Blue gradient */
+  color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 225, 255, 0.3);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-navbar {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 1rem;
+}
+
+.navbar-search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.search-mode-select {
+  width: 140px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  appearance: none;
+  background: white
+    url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")
+    no-repeat right 1rem center / 1em auto;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-mode-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #ff3c3c;
+  background-color: #fff0f0;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  height: 40px;
+  font-size: 1rem;
+  color: #1f2937;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+  box-shadow: 0 0 0 2px #ff4d4d;
+}
+
+.nav-button {
+  background-color: #ff3c3c;
+  color: #fff;
+  height: 40px;
+  padding: 0 20px;
+  
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px black;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #ff1e1e;
+  transform: scale(1.05);
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 0.5rem;
+  padding: 0 1rem;
+}
+
+.nav-homebutton {
+  background-color: #ff3c3c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-homebutton:hover {
+  background-color: #ff1e1e;
+  transform: scale(1.05);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 850px) {
+  .nav-favourite {
+    display: none;
+  }
+
+  .title-navbar {
+    font-size: 1.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .navbar-search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-mode-select {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-bar {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .nav-button {
+    width: 60%;
+    margin-top: 0.5rem;
+  }
+}
