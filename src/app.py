@@ -14,8 +14,8 @@ CORS(app)
 
 
 app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'        
-app.config['MYSQL_PASSWORD'] = 'root'    
+app.config['MYSQL_USER'] = 'your mysql username'        
+app.config['MYSQL_PASSWORD'] = 'your mysql password'    
 app.config['MYSQL_DB'] = 'movie_recommendation_system'
 
 mysql = MySQL(app)
@@ -102,7 +102,7 @@ def fetch_poster(movie_id):
 
     try:
         response = requests.get(
-            f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=0e118a20ca98d14c5b9b2b1d76981cd7&language=en-US"
+            f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={YOUR_API_KEY}&language=en-US"
         )
         data = response.json()
         poster_path = data.get('poster_path')
@@ -231,7 +231,7 @@ def search_by_keyword():
 def get_movie_trailer(movie_id):
     try:
         response = requests.get(
-            f"https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=0e118a20ca98d14c5b9b2b1d76981cd7&language=en-US"
+            f"https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key={YOUR_API_KEY}&language=en-US"
         )
         data = response.json()
         # Filter trailers
@@ -246,3 +246,4 @@ def get_movie_trailer(movie_id):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5555, debug=True)
+
